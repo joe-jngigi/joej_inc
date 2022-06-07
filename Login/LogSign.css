@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(23, 23, 23);
+    line-height: 0.5em;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aqua;
+
+}
+#mainWeb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin:  -20px 0 50px;
+    font-size: 16px;
+
+}
+#mainWeb .overLayContainer p{
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0px 30px;
+}
+#mainWeb span{
+    font-size: 13px;
+}
+#mainWeb .formContainer a{
+    text-decoration: none;
+    font-size: 15px;
+    color: darkorange;
+    margin: 15px 0;
+
+}
+#mainWeb .signPad{
+    background-color: rgb(12, 11, 11);
+    
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgb(0, 0, 0), 0 10px 10px rgb(22, 21, 21);
+    width: 50%;
+    max-width: 100%;
+    min-height: 55vh;    
+    position: relative;
+    
+    overflow: hidden;
+    
+}
+#mainWeb .formContainer form{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#mainWeb .formContainer .socialContainer{
+    margin: 20px 0px;
+}
+#mainWeb .formContainer .socialContainer a{
+    border: 1px solid aqua;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    height: 40px;
+    width: 40px;
+}
+#mainWeb .formContainer input{
+    background-color: black;
+    color: aqua;
+    width: 100%;
+    border: none;
+    padding: 15px 20px;
+    margin: 8px 0;
+    outline: none;
+}
+#mainWeb button{
+    border-radius: 30px;
+    color: whitesmoke;
+    outline: none;
+    border: 1px solid orangered;
+    background-color: orangered;
+    padding: 10px 45px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition:trasform 80ms ease-in;
+    cursor: pointer;
+}
+#mainWeb  button:active{
+    transform: scale(0.95);
+}
+#mainWeb .ghost {
+    background: transparent;
+    border: 1px solid rgb(12, 11, 11);
+    color: rgb(12, 11, 11);
+}
+#mainWeb .formContainer{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+#mainWeb .formSignin{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 2;
+}
+#mainWeb .formSignup{
+    left: 0;
+    width: 50%;
+    
+    z-index: 1;
+   
+}
+#mainWeb #overLayContainer{
+    
+    position: absolute; 
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+   
+    
+}
+#mainWeb .overLay{
+    background-color: orangered;
+    background: linear-gradient(to right,orangered, rgb(255, 0, 43))
+    no-repeat 0 0 /cover;
+    color: whitesmoke;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    overflow-y: hidden;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out ;
+}
+.overPanel{  
+    position:absolute;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out ; 
+}
+.overLayRight{
+    right: 0;
+    transform: translateX( 0%);
+   
+}
+.overLayLeft{
+    transform: translateX( -20%);
+   
+}
+
+/*position: relative;
+    overflow: hidden;*/
+
+
+/*
+.overPanel{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateX( 0%);
+    
+}
+#*/
+/*move sign to the right*/
+.signPad.right-panel-active .formSignin{
+    transform: translateX(100%);
+    z-index: -2;
+}
+/*move overLay to the left*/
+.signPad.right-panel-active #overLayContainer{
+    transform: translateX(-100%);
+}
+/*move sign in under sign up*/
+.signPad.right-panel-active .formSignup{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 1000;
+    background-color: yellow;
+}
+#mainHeader{
+    background-color: black;
+    height: 55px;
+    border: 0px;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+}
+#webLogo{
+    position: relative;
+    overflow: hidden;
+    float: left;
+    margin: 5px;
+}
+#webLogo img{
+    background-color: aqua;
+    border: 2px solid rgb(0, 255, 255);
+    border-radius: 8px;
+    top: 5;
+    left: 10;
+}
+.homePage{
+    
+    float: right;
+    color: azure;
+    margin-top: 10px;
+    margin-right: 15%;
+   
+}
+.homePage ul{
+    display: inline-flex;
+    margin: 2px ;
+}
+.homePage ul li{
+   
+    padding: 0px;
+    list-style: none;
+    margin-top: 0px;
+    margin-right:40px;
+}
+.homePage ul li a{
+    border: 2px aqua solid;
+    padding: 3px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: azure;
+    text-decoration: none;
+}
+
+#mainWeb .signInfo p{
+    width: 40%;
+    margin: 0px auto;
+    font-size: 15px;
+    text-align: center;
+    color: whitesmoke;
+    line-height: 1.3em;
+}
+#mainWeb .signInfo p a{
+    text-decoration: none;
+    color: teal;
+}
+
+
+#mainFooter{
+    background-color: black;
+    height: 7.5vh;
+}

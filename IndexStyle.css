@@ -1,0 +1,383 @@
+/*@import url(wwww.googlefonts)*/
+
+body{
+    background-color: rgb(23,23,23);
+    color: aqua;
+    font-family: 'Dancing Script','Alfa Slab One', cursive;
+    font-size: 20px;
+    line-height: 1.6em;
+    
+    margin: 0px;
+    padding:0px;
+
+}
+#showCase{
+   overflow: hidden;
+    color: #0400ff;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    
+}
+#infromationSec::after{
+    content: '';
+    background-image: url('./Resources/Images/pexels-dmitry-alexandrovich-building.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: block;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    transition: all 0.09s;
+    width: 100%;
+    
+    display: flex;
+    
+
+    /*To clear the space between after positioning*/
+    
+}
+#infromationSec:hover::after{
+    filter: blur(9px);
+    -webkit-filter: blur(9px);
+    
+
+}
+
+#infromationSec .mainContainer{
+    position: absolute ;
+    padding-top: 25vh;
+    z-index: 50;
+    transition: all 1s;
+    
+    
+    
+}
+#containerOne{
+    max-width: 80%;
+    margin: 0 auto;
+}
+#containerTwo{
+    display: none;
+}
+
+#infromationSec:hover .container{
+    
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    height: 50vh;
+    transition: 1s;
+
+}
+#infromationSec:hover .userUtilities{
+    margin: 0px;
+    height: 100%;
+    flex:1;
+    box-sizing: border-box;
+    position: relative;
+    
+   
+}
+#infromationSec:hover #containerOne{
+
+    border-right: 1px #0400ff  solid;
+    height: 100%;
+    max-width: 100%;
+    padding: 30px; 
+}
+#infromationSec:hover #containerTwo{
+    display: block;
+    border-left: 1px #0400ff solid;
+    height: 100%;
+    max-width: 100%;
+    padding: 30px; 
+    
+}
+.signIn{
+    outline: none;
+    background: transparent;
+    padding:20px 70px;
+    position: absolute;
+    right: 130px;
+    cursor: pointer;
+    
+    border: tomato solid 2px;
+   
+    border-radius: 30px;
+}
+.signIn a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+
+#showCase .container h1{
+    color: darkorange;
+    font-size: 4rem;
+    margin-bottom: 0px;
+}
+#showCase .container h2{
+    font-size: 2rem;
+    font-weight:bolder;
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+/*This is CSS for main vaigation*/
+#mainHeader{
+    background-color: black;
+    height: 55px;
+    width: 100%;
+    margin: 0px;
+    border: 0px;
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
+    
+}
+#webLogo {
+    overflow: hidden;
+    float: left;
+}
+
+#webLogo img{
+    background-color: aqua;
+    border: 1px solid rgb(0, 255, 255);
+    border-radius: 8px;
+    margin-top: 5px ;
+    margin-left: 10px;
+
+}
+
+#navBar{
+    margin-top: 10px;
+    margin-right: 15px;
+   /* border: red solid 2px; */
+    float :right;
+    overflow: hidden;
+    
+}
+#navBar ul{
+    margin: 0px;
+    padding: 0px;
+}
+#navBar ul li{
+    line-height: 1.4em;
+    list-style: none;
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    
+    
+}
+#navBar ul li:hover{
+    background-color: darkslateblue;
+    border-radius: 5px;
+}
+
+#navBar li a{
+    text-decoration: none;
+    color: aqua;
+    font-size: 20px;
+   
+}
+#navBar a:hover{
+    color: whitesmoke;
+}
+#navBar a:active{
+    color:darkorange;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+/* CSS for the description */
+
+/*main body of the site styling*/
+.randomBorders{
+    height: 20px;
+    background-color: tomato;
+    
+}
+#showCaseTwo .textDescription{
+    /* This will make the bottoma nd top 0px
+    while the left and right all center*/
+    max-width: 70%;
+    text-align: center;
+    margin:  40px auto;
+    padding: 0px 3rem;  
+    font-size: 17px;
+}
+
+/* Code for the view gallery*/
+#showCaseTwo .photoDescription h2,#userServices .servicesTitle h2{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 1.5rem;
+    color: darkorange;
+    
+}
+#showCaseTwo .newContainer{
+    height: 70vh;
+    width: 70%;
+    margin: auto;
+    background-color:  rgb(94, 88, 88) ;
+    /*In combination with 'float' and 'position',
+     determines the type of box or boxes that are
+      generated for an element*/
+    display: flex;
+   
+    margin-bottom: 20px;
+}
+
+.imageColumns:nth-child(1){
+    background-color: blue;
+}
+.imageColumns:nth-child(2){
+    background-color: rgb(220, 27, 20);
+}
+.imageColumns:nth-child(3){
+    background-color: rgb(54, 223, 223);
+}
+.imageColumns{
+    height: 100%;
+    flex:1 ;
+    box-sizing: border-box;
+    background-color: rgb(177, 172, 172);
+    padding: 25px;
+    color: azure;
+    transition: 0.7s;
+    position: relative;
+    
+}
+.imageColumns:hover{
+    flex-grow: 2.5;
+}#mainHeader
+
+.newContainer .imageColumns h2{
+    text-align: center;
+}
+.imageColumns:hover h2{
+    text-align-last: left;
+}
+.imageColumns .Caption{
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 50px 0px;
+    display: none;
+    
+}
+.imageColumns:hover .Caption{
+    display: block;
+}
+.imageColumns .Caption button{
+    border: solid white 1px;
+    outline: none;
+    background-color: transparent;
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 12px;
+   
+}
+.imageColumns img{
+    height: 300px;
+    position: absolute;
+    
+    right: 0;
+    bottom: 0;
+}
+
+
+/*Services section*/
+.serveContain{
+    
+    max-width: 70%;
+    margin: auto;
+    padding:2rem 1rem;
+    overflow: hidden;
+}
+.grid-3{
+    
+    display: grid;
+    /*Make grid even using 1fraction*/ 
+    grid-gap:20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.Servecontent{
+    border-right:2px grey solid ;
+    padding:0px 20px;
+}
+.center{
+    text-align: center;
+    margin: auto;
+}
+
+/*footer Section*/
+#mainFooter{
+    background-color: black;
+}
+#mainFooter .textDescription{
+    margin: 0px auto;
+    padding: 0px 3rem;
+}
+#mainFooter .footerColumns{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0rem;
+    text-align: left;
+    font-size: 15px;
+}
+#mainFooter .footerColumns ul li{
+    list-style: none;
+    
+} 
+#mainFooter .footerColumns ul li:first-child{
+    border-bottom: 1px rgb(177, 177, 177) solid;
+    padding-bottom: 0.5rem;
+    
+}
+#mainFooter .footerColumns ul li a{
+    padding: 0px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+#mainFooter .footerBottom{
+    background-color: rgb(19, 17, 17);
+    font-size: 14px;
+    padding: 0px 0rem;
+    text-align: center;
+
+}
+#mainFooter .footerBorder{
+    height: 20px;
+    background-color: black;
+    margin: 0px;
+}
+
+@media (max-width: 580px){
+    .container .hideParagraph{
+              
+        color: red;
+         display: none;
+     }
+     #showCase{
+         height: 50vh;
+     }
+     #showCase .container {
+         margin: 15vh;
+     }
+     #showCase .container h1{
+         font-size: 3rem;
+     }
+     #showCase .container h2{
+         font-size: 1rem;
+     }
+}
